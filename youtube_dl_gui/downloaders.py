@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Python module to download videos.
@@ -8,7 +8,6 @@ for downloading the video files.
 
 """
 
-from __future__ import unicode_literals
 
 import re
 import os
@@ -111,8 +110,7 @@ class YoutubeDLDownloader(object):
             from downloaders import YoutubeDLDownloader
 
             def data_hook(data):
-                print data
-
+                print(data)
             downloader = YoutubeDLDownloader('/usr/bin/youtube-dl', data_hook)
 
             downloader.download(<URL STRING>, ['-f', 'flv'])

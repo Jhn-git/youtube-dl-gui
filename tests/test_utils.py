@@ -3,7 +3,6 @@
 
 """Contains test cases for the utils.py module."""
 
-from __future__ import unicode_literals
 
 import sys
 import os.path
@@ -17,7 +16,7 @@ try:
 
     from youtube_dl_gui import utils
 except ImportError as error:
-    print error
+    print(error)
     sys.exit(1)
 
 
@@ -142,10 +141,10 @@ class TestConvertItem(unittest.TestCase):
     def test_convert_item_unicode_str(self):
         self.assertIsInstance(utils.convert_item("test"), str)
 
-    def test_convert_item_unicode_unicode(self):
+    def test_convert_item_unicode_str(self):
         self.assertIsInstance(utils.convert_item("test", True), unicode)
 
-    def test_convert_item_str_unicode(self):
+    def test_convert_item_str_str(self):
         self.assertIsInstance(utils.convert_item(str("test"), True), unicode)
 
     def test_convert_item_str_str(self):
@@ -160,19 +159,19 @@ class TestConvertItem(unittest.TestCase):
     def test_convert_item_list_unicode_str(self):
         self.check_iter(self.input_list_u, list, False)
 
-    def test_convert_item_list_str_unicode(self):
+    def test_convert_item_list_str_str(self):
         self.check_iter(self.input_list_s, list, True)
 
     def test_convert_item_tuple_unicode_str(self):
         self.check_iter(self.input_tuple_u, tuple, False)
 
-    def test_convert_item_tuple_str_unicode(self):
+    def test_convert_item_tuple_str_str(self):
         self.check_iter(self.input_tuple_s, tuple, True)
 
     def test_convert_item_dict_unicode_str(self):
         self.check_iter(self.input_dict_u, dict, False)
 
-    def test_convert_item_dict_str_unicode(self):
+    def test_convert_item_dict_str_str(self):
         self.check_iter(self.input_dict_s, dict, True)
 
 

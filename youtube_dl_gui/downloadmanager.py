@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Youtubedlg module for managing the download process.
@@ -19,7 +19,6 @@ Note:
 
 """
 
-from __future__ import unicode_literals
 
 import time
 import os.path
@@ -31,7 +30,6 @@ from threading import (
 )
 
 from wx import CallAfter
-from wx.lib.pubsub import setuparg1
 from wx.lib.pubsub import pub as Publisher
 
 from .parsers import OptionsParser

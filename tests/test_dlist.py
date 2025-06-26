@@ -3,7 +3,6 @@
 
 """Contains test cases for the DownloadList object."""
 
-from __future__ import unicode_literals
 
 import sys
 import os.path
@@ -16,7 +15,7 @@ try:
     import mock
     from youtube_dl_gui.downloadmanager import DownloadList, synchronized
 except ImportError as error:
-    print error
+    print(error)
     sys.exit(1)
 
 

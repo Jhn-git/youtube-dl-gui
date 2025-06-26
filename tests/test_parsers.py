@@ -3,7 +3,6 @@
 
 """Contains test cases for the parsers module."""
 
-from __future__ import unicode_literals
 
 import sys
 import os.path
@@ -15,7 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(PATH)))
 try:
     from youtube_dl_gui.parsers import OptionsParser
 except ImportError as error:
-    print error
+    print(error)
     sys.exit(1)
 
 

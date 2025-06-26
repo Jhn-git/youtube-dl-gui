@@ -9,7 +9,6 @@ Script to automatically check PO files
 
 """
 
-from __future__ import unicode_literals
 
 import os
 import sys

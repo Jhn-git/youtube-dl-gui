@@ -1,15 +1,13 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Youtubedlg module responsible for the main app window. """
 
-from __future__ import unicode_literals
 
 import os
 import gettext
 
 import wx
-from wx.lib.pubsub import setuparg1 #NOTE Should remove deprecated
 from wx.lib.pubsub import pub as Publisher
 
 from wx.lib.mixins.listctrl import ListCtrlAutoWidthMixin

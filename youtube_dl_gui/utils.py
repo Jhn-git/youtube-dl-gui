@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Youtubedlg module that contains util functions.
@@ -10,7 +10,6 @@ Attributes:
 
 """
 
-from __future__ import unicode_literals
 
 import os
 import sys
@@ -22,7 +21,7 @@ import subprocess
 try:
     from twodict import TwoWayOrderedDict
 except ImportError as error:
-    print error
+    print(error)
     sys.exit(1)
 
 from .info import __appname__
@@ -32,7 +31,7 @@ from .version import __version__
 _RANDOM_OBJECT = object()
 
 
-YOUTUBEDL_BIN = 'youtube-dl'
+YOUTUBEDL_BIN = 'yt-dlp'
 if os.name == 'nt':
     YOUTUBEDL_BIN += '.exe'
 
@@ -106,7 +105,7 @@ def convert_on_bounds(func):
 
 # See: https://github.com/MrS0m30n3/youtube-dl-gui/issues/57
 # Patch os functions to convert between 'str' and 'unicode' on app bounds
-os_sep = unicode(os.sep)
+os_sep = str(os.sep)
 os_getenv = convert_on_bounds(os.getenv)
 os_makedirs = convert_on_bounds(os.makedirs)
 os_path_isdir = convert_on_bounds(os.path.isdir)

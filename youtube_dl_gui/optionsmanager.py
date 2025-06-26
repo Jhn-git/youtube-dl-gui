@@ -1,9 +1,8 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Youtubedlg module to handle settings. """
 
-from __future__ import unicode_literals
 
 import os
 import json
